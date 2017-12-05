@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Formfun</title>
+    <!-- jQuery library -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- CSS resets and styles -->
+    <link rel="stylesheet" type="text/css" href="./css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family==Montserrat|Playfair+Display:400,700" rel="stylesheet">
+
+  </head>
+  <body>
+    <section class="togSwitch">
+      <label class="switch">
+        <input type="checkbox">
+        <div class="slide-btn"></div>
+      </label>
+    </section>
+    <section>
+        <form role="form">
+            <div>
+              <label for="fullName">Enter your full name:</label>
+              <input type="text" id=fullName name="fullName" required pattern="[A-zÀ-ž]+[A-zÀ-ž.]{1,}+[A-zÀ-ž ]+" title="Your name should only contain upper or lowercase letters e.g. Jane S. Smith">
+<!-- regex testers https://regexr.com/ && https://regex101.com/ -->
+              <label for="email">Enter your email:</label>
+              <input type="email" id=email name="email" pattern="[a-Z0-9._%+-]+@[a-Z0-9.-]+\.[a-z]{2,3}" title="Enter a valid email address e.g.name@domain.io" required>
+
+              <label for="bday">Enter your birthday:</label>
+              <input type="date" id="bDay" name="bDay">
+
+              <label for="password">Enter your password:</label>
+              <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Password must be six or more characters, include one integer, one uppercase letter, and one lowercase letter" required >
+              <input type="Submit">
+              <input type="reset" value="Form reset" accesskey="r">
+            </div>
+          </form>
+    </section>
+    </body>
+    </html>

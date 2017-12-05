@@ -1,0 +1,34 @@
+
+.switch {
+    opacity: 0;
+}
+
+.slide-btn {
+    width: 45px;
+    height: 18px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 10px;
+    margin-bottom: 1em;
+    position: relative;
+    
+}
+
+.slide-btn:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    transition: all .25s ease-in-out
+}
+
+input[type=checkbox]:checked + .slide-btn:before {
+    left: 29px;
+}
+
+input[type=checkbox]:checked + .slide-btn {
+    background-color: #00ca22
+}
